@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" data-color="light">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title> Tailwind-css-js-project</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" href="assets/images/favicon.png" type="images/x-icon" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- gulp:css -->
+      <!-- <link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/67b26810ca672dadc8ffda4a84e33dce5b6f51ef/light/assets/css/app.min.css'/> -->
+      <!-- endgulp -->
+      <style>
+         .dropdown:hover .dropdown-content {display: block;}
+      </style>
+   </head>
+   <body>
+ <!--  ====================== Main Header Section =============================  -->
+ <!-- <div class="bg-black">
+   <div class="container mx-auto flex flex-wrap h-9 px-4">
+     <div class="md:w-6/12 flex items-center gap-8 md:hidden sm:hidden">
+       <a href="#">
+           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+               <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+           </svg>
+       </a>
+       <a href="#">
+           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+               <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+           </svg>
+       </a>
+       <a href="#">
+           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+               <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+           </svg>
+       </a>
+     </div>
+     <div class="md:w-6/12 items-center">
+       <a href="#" class="text-gray-200 float-right pl-4 text-xs pt-2 font-semibold">Privacy policy</a>
+       <a href="#" class="text-gray-200 float-right px-7 text-xs pt-2 font-semibold">Request Quote</a>
+       <a href="#" class="text-gray-200 float-right px-7 text-xs pt-2 font-semibold">FAQ</a>
+     </div>            
+   </div>
+</div> -->
+     
+
+<!--  ====================== Header Section =============================  -->
+<header class="z-10 relative sticky top-0 header-area  w-full bg-black bg-opacity-40" >
+   <div class="container mx-auto relative px-4 z-20 py-6">
+      <nav class="flex items-center justify-between relative">
+         <a href='index.html' class='flex items-center flex-shrink-0 mr-6'>
+         <img class="h-10" src="img/logo-light.png" alt="title">
+         </a>
+         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto">
+            <ul class="mobile-menu bg-yellow-400  lg:bg-transparent shadow lg:shadow-none absolute lg:relative inset-x-0 hidden lg:flex lg:flex-grow items-center text-base text-blueGray-600 font-semibold mt-7 lg:mt-0 mobile-hover">
+               <li class="relative dropdown">
+                  <a class="p-4 flex items-center text-white transition duration-500" href="index.html"> Home </a>
+               </li>
+               <ul class="dropdown relative inline-block">
+                  <button class="dropbtn text-white px-4"><b>About</b></button>
+                  <li class="dropdown-content absolute right-0 hidden pt-10" style="left:0;">
+                    <ul class=" bg-white py-2 lg:absolute lg:shadow lg:w-44 transition duration-500 submenu">
+                        <li><a class='hover:bg-white py-2 px-4 flex items-center hover:bg-gray-200 hover:text-yellow-600 transition duration-500' href='about.html'> About Us </a></li>
+                        <li><a class='hover:bg-white py-2 px-4 flex items-center hover:bg-gray-200 hover:text-yellow-600 transition duration-500' href='/light/explore2'> The Team</a></li>
+                        <li><a class='hover:bg-white py-2 px-4 flex items-center hover:bg-gray-200 hover:text-yellow-600 transition duration-500' href='/light/item-single'> FAQ </a></li>
+                     </ul>
+                  </li>
+               </ul>
+               
+               <li><a class='p-4 flex items-center text-white transition duration-500' href='/light/activity'> Practice areas </a></li>
+               <li><a class='p-4 flex items-center text-white transition duration-500' href='contact.html'> Contact </a></li>
+            </ul>
+         </div>
+
+         <div class="mr-2 hidden sm:block">
+          <span><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 bg text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+             <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+             </svg>
+          </span>
+        </div>
+        <div class=" hidden sm:block">
+             <span class="font-semibold" style="color:rgb(184, 183, 183);">Need Help?</span><br><span class="text-lg font-semibold" style="color:rgb(184, 183, 183);">1 200 300 9000</span>
+        </div>
+
+         <button class="bg-blueGray-50 mobile-toggle block lg:hidden">
+            <span class="bg-blueGray-600"></span>
+            <span class="bg-blueGray-600"></span>
+            <span class="bg-blueGray-600"></span>  
+         </button> 
+      </nav>
+   </div>
+</header>
+
+
+       <!--  ====================== bennar Section =============================  -->
+       <section class="hero-section">
+           <div class="mx-auto">
+             <img class="w-full h-50" src="img/subheader2.jpg" alt="img">
+           </div>
+        </div>
+       </section>
+
+
+
+       <!--  ====================== News Section =============================  -->
+       <section class="my-10">
+        <div class="container mx-auto">
+              <div class="text-center" >
+                 <h1 class="text-3xl text-black text-center pb-3"> <b>Contact Us</b> </h1>
+              </div>
+           <div class="flex flex-wrap gap-23 pl-8">
+             <div class="md:w-4/12 pt-5 md:my-0 px-4">
+                <img src="img/p3.jpg" class="w-auto mb-5 rounded-t" alt="###">
+                <div class="pb-9">
+                    <h1 href="#" class="text-black pb-8 pt-5 text-xl"><b>US Office</b></h1>
+                    <div class="flex pt-">
+                        <span class="mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                        <span class="text-sm text-opacity-60" style="color: rgb(139, 139, 139);">08 W 36th St, New York, NY 10001</span>
+                        </div>
+                        <div class="flex pt-4">
+                        <span class="mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                            </svg>
+                        </span>
+                        <span class="text-sm text-opacity-60" style="color: rgb(139, 139, 139);">+1 333 9296</span>
+                        </div>
+                        <div class="flex pt-4">
+                        <span class= "mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                        <span class="text-sm text-opacity-60" style="color: rgb(139, 139, 139);"><a href="#!">contact@example.com</a></span>
+                        </div>
+                        <div class="flex pt-4">
+                            <span class="mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            </span>
+                            <span class="text-sm text-opacity-60" style="color: rgb(139, 139, 139);"><a href="#!">Download Brochure</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-4/12 pt-5 md:my-0 px-4">
+                    <img src="img/p1.jpg" class="w-auto mb-5 rounded-t" alt="###">
+                    <div class="pb-9">
+                        <h1 href="#" class="text-black pb-8 pt-5 text-xl"><b>UK Office</b></h1>
+                        <div class="flex pt-">
+                            <span class="mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                            <span class="text-sm text-opacity-60" style="color: rgb(139, 139, 139);">08 W 36th St, New York, NY 10001</span>
+                            </div>
+                            <div class="flex pt-4">
+                            <span class="mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                </svg>
+                            </span>
+                            <span class="text-sm text-opacity-60" style="color: rgb(139, 139, 139);">+1 333 9296</span>
+                            </div>
+                            <div class="flex pt-4">
+                            <span class= "mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                            <span class="text-sm text-opacity-60" style="color: rgb(139, 139, 139);"><a href="#!">contact@example.com</a></span>
+                            </div>
+                            <div class="flex pt-4">
+                            <span class="mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                            </span>
+                            <span class="text-sm text-opacity-60" style="color: rgb(139, 139, 139);"><a href="#!">Download Brochure</a></span>
+                            </div>
+                    </div>
+                 </div>
+
+                 <div class="md:w-4/12 pt-5 md:my-0 px-4">
+                    <img src="img/p2.jpg" class="w-auto mb-5 rounded-t" alt="###">
+                    <div class="pb-9">
+                        <h1 class="text-black pb-8 pt-5 text-xl"><b>AU Office</b></h1>
+                        <div class="flex pt-">
+                            <span class="mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                            <span class="text-sm text-opacity-60" style="color: rgb(139, 139, 139);">08 W 36th St, New York, NY 10001</span>
+                            </div>
+                            <div class="flex pt-4">
+                            <span class="mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                </svg>
+                            </span>
+                            <span class="text-sm text-opacity-60" style="color: rgb(139, 139, 139);">+1 333 9296</span>
+                            </div>
+                            <div class="flex pt-4">
+                            <span class= "mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                            <span class="text-sm text-opacity-60" style="color: rgb(139, 139, 139);"><a href="#!">contact@example.com</a></span>
+                            </div>
+                            <div class="flex pt-4">
+                            <span class="mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                            </span>
+                            <span class="text-sm text-opacity-60" style="color: rgb(139, 139, 139);"><a href="#!">Download Brochure</a></span>
+                            </div>
+                    </div>
+                 </div>
+           </div>
+        </div>
+    </section>
+
+
+
+
+
+   <!--  ====================== Foter Section =============================  -->
+    <section class="bg-black">
+      <div class="container mx-auto py-14" style="border-bottom: 1px solid rgb(48, 47, 47);">
+         <div class="flex flex-wrap pl-8 pr-8">
+            <div class="md:w-2/12 pt-5 md:my-0"></div>
+            <div class="md:w-8/12 w:12 pt-5 md:my-0">
+               <h1 class="text-white pb-8 text-xl text-center"><b>Do you have any question?</b></h1>
+               <div class="md:px-16 pb-4">
+                  <input class="appearance-none block w-full bg-gray-900 text-gray-400 border border-gray-900 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-gray-700 focus:border-gray-900" id="grid-last-name" type="text" placeholder="Your Name">
+               </div>
+               <div class="md:px-16 pb-4">
+                  <input class="appearance-none block w-full bg-gray-900 text-gray-400 border border-gray-900 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-gray-700 focus:border-gray-900" id="grid-last-name" type="email" placeholder="Your Email">
+               </div>
+               <div class="md:px-16 pb-4">
+                  <input class="appearance-none block w-full bg-gray-900 text-gray-400 border border-gray-900 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-gray-700 focus:border-gray-900" id="grid-last-name" type="number" placeholder="Your Number">
+               </div>
+               <div class="md:px-16 pb-4">
+                  <textarea class=" no-resize appearance-none block w-full bg-gray-900 text-gray-400 border border-gray-900 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-gray-700 focus:border-gray-900 h-60 resize-none" id="message" placeholder="Your Massage"></textarea>
+               </div>
+               <div class="text-center">
+                  <button class="shadow bg-yellow-600 hover:bg-yellow-800 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded-sm" type="button">
+                    Submit Form
+                  </button>
+            </div>
+            <div class="md:w-2/12 pt-5 md:my-0"></div>
+         </div>
+      </div>
+    </section>
+
+       
+          <!--  ====================== Foter Section =============================  -->
+          <section class="bg-black" style="border-bottom: 1px solid rgb(48, 47, 47);">
+            <div class="container mx-auto py-14">
+               <div class="flex flex-wrap gap-23 pl-8">
+                 <div class="md:w-4/12 pt-5 md:my-0 px-4">
+                    <img src="img/logo-light.png" alt="##">
+                    <div class="flex pt-12">
+                        <span class="p-1 bg-black rounded-sm mr-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                        <span class="text-sm text-opacity-60" style="color: #fff;">08 W 36th St, New York, NY 10001</span>
+                     </div>
+                     <div class="flex pt-3">
+                        <span class="p-1 bg-black rounded-sm mr-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                            </svg>
+                        </span>
+                        <span class="text-sm text-opacity-60" style="color: #fff;">+1 333 9296</span>
+                     </div>
+                     <div class="flex pt-3">
+                        <span class="p-1 bg-black rounded-sm mr-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                        <span class="text-sm text-opacity-60" style="color: #fff;"><a href="#!">contact@example.com</a></span>
+                     </div>
+                     <div class="flex pt-3">
+                        <span class="p-1 bg-black rounded-sm mr-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                           </svg>
+                        </span>
+                        <span class="text-sm text-opacity-60" style="color: #fff;"><a href="#!">Download Brochure</a></span>
+                     </div>
+                 </div>
+   
+                 <div class="md:w-4/12 pt-5 md:my-0 px-4">
+                  <h1 class="text-yellow-600"><b>Practice Areas</b></h1>
+                  <div class="flex pt-7">
+                     <span class="bg-black rounded-sm mr-4">
+                        <b><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                         </svg>
+                        </b>
+                     </span>
+                     <span class="text-sm text-opacity-60" style="color: #fff;">Corporate and M&A</span>
+                  </div>
+                  <div class="flex pt-4">
+                     <span class="bg-black rounded-sm mr-4">
+                        <b><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                         </svg>
+                        </b>
+                     </span>
+                     <span class="text-sm text-opacity-60" style="color: #fff;">Construction and Real Estate</span>
+                  </div>
+                  <div class="flex pt-4">
+                     <span class="bg-black rounded-sm mr-4">
+                        <b><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                         </svg>
+                        </b>
+                     </span>
+                     <span class="text-sm text-opacity-60" style="color: #fff;">Commercial Duspute Resolution</span>
+                  </div>
+                  <div class="flex pt-4">
+                     <span class="bg-black rounded-sm mr-4">
+                        <b><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                         </svg>
+                        </b>
+                     </span>
+                     <span class="text-sm text-opacity-60" style="color: #fff;">Employment</span>
+                  </div>
+                  <div class="flex pt-4">
+                     <span class="bg-black rounded-sm mr-4">
+                        <b><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                         </svg>
+                        </b>
+                     </span>
+                     <span class="text-sm text-opacity-60" style="color: #fff;">Banking and Finance</span>
+                  </div>
+                 </div>
+   
+                 <div class="md:w-4/12 pt-5 md:my-0 px-4">
+                  <h1 class="text-yellow-600"><b>Newsletter</b></h1>
+                  <div class="flex pt-7">
+                     <span class="text-sm text-opacity-60" style="color: #fff;line-height: 2;">Signup for our newsletter to get the latest news, updates and special offers in your inbox. Lorem ipsum dolor sit.</span>
+                  </div>
+                  <span class="flex py-5">
+                        <input class=" h-9 w-64 border border-transparent focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent" placeholder=" enter your email">
+                     <button class="w-16 bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-opacity-50">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                         </svg>
+                      </button>
+                  </span>
+                  <span class="text-xs text-opacity-100 text-white">Your email is safe with us. We don't spam.</span>
+               </div>
+            </div>
+        </section>
+   
+        <div class="bg-black">
+            <div class="container mx-auto px-4">
+               <div class="flex justify-between gap-23 pl-8">
+                  <div class="py-5 md:my-0">
+                     <span class="text-sm text-opacity-60" style="color: #fff;"> © Copyright 2021 - Design by Sajal Roy</span>
+                  </div>
+                  <div class="md:my-0 flex items-center ">
+                     <div class="flex gap-2 items-center float-right">
+                        <a href="#!" class="px-4 py-2 bg-yellow-700 rounded-sm hover:bg-white group transition ease-in-out duration-700"><i class="fa fa-facebook-f text-white group-hover:text-yellow-700" style="font-size: 19px;"></i></a>
+                        <a href="#!" class="px-3 py-2 bg-yellow-700 rounded-sm hover:bg-white group transition ease-in-out duration-700"><i class="fa fa-twitter text-white group-hover:text-yellow-700" style="font-size: 19px;"></i></a>
+                        <a href="#!" class="px-3 py-2 bg-yellow-700 rounded-sm hover:bg-white group transition ease-in-out duration-700"><i class="fa fa-linkedin text-white group-hover:text-yellow-700" style="font-size: 19px;"></i></a>
+                        <a href="#!" class="px-3 py-2 bg-yellow-700 rounded-sm hover:bg-white group transition ease-in-out duration-700"><i class="fa fa-pinterest text-white group-hover:text-yellow-700" style="font-size: 19px;"></i></a>
+                        <a href="#!" class="px-3 py-2 bg-yellow-700 rounded-sm hover:bg-white group transition ease-in-out duration-700"><i class="fa fa-rss text-white group-hover:text-yellow-700" style="font-size: 19px;"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+        </div>
+      
+   
+   
+         <!-- gulp:js -->
+         <script src='https://d33wubrfki0l68.cloudfront.net/js/e3aeb05a1e1f79dd89e3aac244cfb77b1d8bcff4/assets/js/build.min.js'></script>
+         <!-- endgulp -->
+       <!-- <script type="text/javascript">
+           window.$crisp=[];
+           window.CRISP_WEBSITE_ID="0fb3e5b5-1038-45e7-a153-173d144eee90";
+           (function(){d=document;
+           s=d.createElement("script");
+           s.async=1;d.getElementsByTagName("head")[0].appendChild(s);
+           })();
+       </script> -->
+   
+      </body>
+   </html>
+

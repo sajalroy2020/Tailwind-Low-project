@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en" data-color="light">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title> Tailwind-css-js-project</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="shortcut icon" href="assets/images/favicon.png" type="images/x-icon" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- gulp:css -->
+      <!-- <link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/67b26810ca672dadc8ffda4a84e33dce5b6f51ef/light/assets/css/app.min.css'/> -->
+      <!-- endgulp -->
+      <style>
+         .dropdown:hover .dropdown-content {display: block;}
+      </style>
+   </head>
+   <body>
+ <!--  ====================== Main Header Section =============================  -->
+ <!-- <div class="bg-black">
+   <div class="container mx-auto flex flex-wrap h-9 px-4">
+     <div class="md:w-6/12 flex items-center gap-8 md:hidden sm:hidden">
+       <a href="#">
+           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+               <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+           </svg>
+       </a>
+       <a href="#">
+           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+               <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+           </svg>
+       </a>
+       <a href="#">
+           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+               <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+           </svg>
+       </a>
+     </div>
+     <div class="md:w-6/12 items-center">
+       <a href="#" class="text-gray-200 float-right pl-4 text-xs pt-2 font-semibold">Privacy policy</a>
+       <a href="#" class="text-gray-200 float-right px-7 text-xs pt-2 font-semibold">Request Quote</a>
+       <a href="#" class="text-gray-200 float-right px-7 text-xs pt-2 font-semibold">FAQ</a>
+     </div>            
+   </div>
+</div> -->
+      
+
+<!--  ====================== Header Section =============================  -->
+      <header class="z-10 relative sticky top-0 header-area  w-full bg-black bg-opacity-40" >
+         <div class="container mx-auto relative px-4 z-20 py-6">
+            <nav class=" md:flex hidden items-center justify-between relative">
+               <a href='index.html' class='flex items-center flex-shrink-0 mr-6'>
+               <img class="h-10" src="img/logo-light.png" alt="title">
+               </a>
+               <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto">
+                  <ul class="flex">
+                     <li class="relative dropdown">
+                        <a class="p-4 flex items-center text-white transition duration-500" href="index.html"> Home </a>
+                     </li>
+
+                     <li class="dropdown relative inline-block">
+                        <button id="" class="dropbtn text-white px-5 pt-4">About</button>
+                        <ul class="dropdown-content absolute right-0 hidden pt-10" style="left:0;">
+                           <li class=" bg-white py-2 lg:absolute lg:shadow lg:w-44 transition duration-500 submenu">
+                              <a class='hover:bg-white py-2 px-4 flex items-center hover:bg-gray-200 hover:text-yellow-600 transition duration-500' href='about.html'> About Us </a>
+                              <a class='hover:bg-white py-2 px-4 flex items-center hover:bg-gray-200 hover:text-yellow-600 transition duration-500' href='/light/explore2'> The Team</a>
+                              <a class='hover:bg-white py-2 px-4 flex items-center hover:bg-gray-200 hover:text-yellow-600 transition duration-500' href='/light/item-single'> FAQ </a>
+                           </li>
+                        </ul>
+                     </li>
+                    
+                     <li><a class='p-4 flex items-center text-white transition duration-500' href='/light/activity'> Practice areas </a></li>
+                     <li><a class='p-4 flex items-center text-white transition duration-500' href='contact.html'> Contact </a></li>
+                  </ul>
+               </div>
+
+               <div class="mr-2 hidden sm:block">
+                <span><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 bg text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                   </svg>
+                </span>
+              </div>
+              <div class=" hidden sm:block">
+                   <span class="font-semibold" style="color:rgb(184, 183, 183);">Need Help?</span><br><span class="text-lg font-semibold" style="color:rgb(184, 183, 183);">1 200 300 9000</span>
+              </div>
+            </nav>
+
+            <div  class="md:hidden block mobile-menu">
+               <span id="main-btn">
+                  <svg  xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                   </svg>
+               </span>
+             <ul id="main-menu" class="bg-black p-3 hidden">
+                <li class="py-3"><a href="#" class="text-sm text-white font-semibold">Home</a></li>
+                <li class="py-3"><a href="#" class="text-sm text-white transition duration-300">Services</a></li>
+                <li class="py-3"><a href="#" class="text-sm text-white transition duration-300">About</a></li>
+                <li class="py-3"><a href="#" class="text-sm text-white transition duration-300">Contact Us</a></li>
+                <div class="mr-2 hidden sm:block">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 bg text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                     </svg>
+                  </span>
+                </div>
+                <div class=" hidden sm:block">
+                     <span class="font-semibold" style="color:rgb(184, 183, 183);">Need Help?</span><br><span class="text-lg font-semibold" style="color:rgb(184, 183, 183);">1 200 300 9000</span>
+                </div>
+             </ul>
+            </div>
+
+         </div>
+      </header>
+
+
+   
+
+      
+  <!--=================================================
+      Start Hero Banner
+  ==================================================-->
+  <div class="z-0 absolute top-0 w-full h-screen " style="background-image: url(img/banner.jpg); background-repeat: no-repeat; background-size: cover; opacity: 1;" >
+   <div class="container max-w-7xl mx-auto px-4 ">
+     <div class="row items-center">
+       <div class="md:order-first order-last md:w-8/12 w-full px-4 flex">
+         <div class=" space-y-6 md:text-left pt-60">
+             <p class="text-gray-900 text-xl text-yellow-600"> <b>Need Any Help?</b> </p>
+             <p class="text-white  lg:text-5xl text-2xl font-semibold"><b>We Fight for Right</b></p>
+             <p class="text-base text-white">Need Any Help Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, ipsam. Lorem ipsum dolor<br> sit amet consectetur adipisicing elit. Maxime, laboriosam!</p>
+             <div class=" space-x-5 pt-4">
+               <a class="inline-block  text-white bg-yellow-600 hover:bg-color- left p-2 px-6 rounded  font-semibold" href="#">Contuct Us</a>
+             </div>
+         </div>
+       </div>
+       <div class="md:order-last order-first md:w-1/2 w-full px-4 ">
+         <div class="flex md:justify-end justify-center md:pb-0 pb-28">
+         </div>
+       </div>
+     </div>
+   </div>
+ </div> 
+
+ <!--=================================================
+     End Hero Banner
+ ==================================================-->
+
+
+
+        <!--  ====================== Text Section =============================  -->
+        <section class="my-32">
+            <div class="container mx-auto">
+               <div class="flex flex-wrap gap-24">
+                 <div class="md:w-5/12 md:px-0 px-5">
+                    <span class="text-sm font-semibold text-yellow-600"><b><i>Welcome</i></b></span><br><br>
+                    <span class="text-4xl" style="font-weight: 700;">Let Our 25 Years of Experience be Your Guide</span>
+                 </div>
+                 <div class="md:w-6/12 md:pt-10 pt-0 md:px-0 px-5">
+                    <span class="text-purple-700 text-opacity-60" style="color: rgb(78, 78, 78);">Consequat occaecat ullamco amet non eiusmod nostrud dolore irure incididunt est duis anim sunt officia. Fugiat velit proident aliquip nisi incididunt nostrud exercitation proident est nisi. Irure magna elit commodo anim ex veniam culpa eiusmod id nostrud sit cupidatat in veniam ad. Eiusmod consequat eu adipisicing minim anim aliquip cupidatat culpa excepteur quis. Occaecat sit eu exercitation irure Lorem incididunt nostrud. </span>
+                 </div>                   
+               </div>
+            </div>
+        </section>
+
+
+          <!--  ====================== subscrib Section =============================  -->
+        <div class="container bg-yellow-500 flex flex-wrap h-15 px-4 items-center mt-">
+         <div class="md:w-6/12 sm:pt-5 flex items-center gap-8 md:pt-0 pt-10">
+           <p class="float-left font-serif text-xl">Now! Get a Free Consultation for Your Case.</p>
+         </div>
+         <div class="md:w-6/12 mt-6 flex justify-center">
+           <button class="bg-gray-900 text-white hover:bg-white hover:text-black px-8 pb-3 pt-2 rounded-sm mt-5 mb-10 float-right">Make Appointment</button>
+         </div>            
+       </div>
+
+      <!--  ====================== card img Section =============================  -->
+
+
+
+      <!--  ====================== img and text Section =============================  -->
+      <div id="exprience">
+         <div class="bg-black">
+            <div class="flex flex-wrap">
+               <div class="md:w-6/12">
+                  <img src="img/9.jpg" class="h-auto w-full" alt="img">
+               </div>
+               <div class="md:w-6/12 flex flex-wrap items-center">
+                  <div class="rounded-sm md:pl-24 pl-3">
+                     <h6 class="text-yellow-600 md:pt-0 pt-5"><b>Experiences</b></h6>
+                     <h1 class="text-white text-5xl pb-12"> <b>Let Our Experience <br>be Your Guide</b> </h1>
+                     <a href="#" class="py-3 px-5 bg-yellow-600 text-white rounded-sm"><b>Our Attorneys</b></a>
+                     <a href="#" class="py-3 px-5 text-white rounded-sm hover:text-yellow-600"><b>Our Expertise</b></a>
+                     <a href="#" class="py-3 px-5 text-white rounded-sm hover:text-yellow-600 "><b>Our Flim</b></a><br><br><br>
+                     <span class="text-purple-700 text-opacity-60" style="color: rgb(250, 248, 248);">Consequat occaecat ullamco amet non eiusmod nostrud dolore irure incididunt est duis anim sunt officia. Fugiat velit proident aliquip nisi incididunt nostrud exercitation proident est nisi. Irure magna elit commodo anim ex veniam culpa eiusmod id nostrud sit cupidatat in veniam ad. Eiusmod consequat eu adipisicing minim anim aliquip cupidatat culpa excepteur quis. Occaecat sit eu exercitation irure Lorem incididunt nostrud. </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!--  ====================== text Section =============================  -->
+      <div id="textSection" class="my-20 container mx-auto">
+         <div class="flex flex-wrap">
+            <div class="md:w-full center md:pb-16 p-5" style="text-align: center;">
+               <h1 class="text-3xl text-black"> <b>Practice Areas</b> </h1>
+               <span class="text-purple-700 text-opacity-60" style="color: rgb(46, 45, 45);">
+                  Consequat occaecat ullamco amet non eiusmod nostrud dolore irure incididunt est <br> duis anim sunt officia. Fugiat velit proident aliquip nisi incididunt nostrud <br> exercitation proident est nisi. Irure magna elit commodo anim ex veniam culpa.
+               </span>
+            </div>
+            <div class="md:w-4/12 md:p-0 p-5">
+               <div class="flex">
+                 <span class="p-1 bg-black rounded-sm mr-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                   </svg>
+                 </span>
+                  <span class="text-purple-700 text-opacity-60" style="color: rgb(46, 45, 45);">Corporate and M&A</span>
+               </div>
+
+               <div class="flex pt-3">
+                  <span class="p-1 bg-black rounded-sm mr-5">
+                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4  text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                   <span class="text-purple-700 text-opacity-60" style="color: rgb(46, 45, 45);">Construction and Real Estate</span>
+               </div>
+               <div class="flex pt-3">
+                  <span class="p-1 bg-black rounded-sm mr-5">
+                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4  text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                   <span class="text-purple-700 text-opacity-60" style="color: rgb(46, 45, 45);">Commercial Duspute Resolution</span>
+               </div>
+               <div class="flex pt-3">
+                  <span class="p-1 bg-black rounded-sm mr-5">
+                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4  text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                   <span class="text-purple-700 text-opacity-60" style="color: rgb(46, 45, 45);">Employment</span>
+               </div>
+            </div>
+            <div class="md:w-4/12 md:p-0 p-5">
+               <div class="flex">
+                 <span class="p-1 bg-black rounded-sm mr-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4  text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                   </svg>
+                 </span>
+                  <span class="text-purple-700 text-opacity-60" style="color: rgb(46, 45, 45);">Banking and Finance</span>
+               </div>
+
+               <div class="flex pt-3">
+                  <span class="p-1 bg-black rounded-sm mr-5">
+                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4  text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                   <span class="text-purple-700 text-opacity-60" style="color: rgb(46, 45, 45);">Captial Market</span>
+               </div>
+               <div class="flex pt-3">
+                  <span class="p-1 bg-black rounded-sm mr-5">
+                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4  text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                   <span class="text-purple-700 text-opacity-60" style="color: rgb(46, 45, 45);">Environmental</span>
+               </div>
+               <div class="flex pt-3">
+                  <span class="p-1 bg-black rounded-sm mr-5">
+                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4  text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                   <span class="text-purple-700 text-opacity-60" style="color: rgb(46, 45, 45);">Intellectual Property Right</span>
+               </div>
+            </div>
+            <div class="md:w-4/12 md:p-0 p-5">
+               <div class="flex">
+                 <span class="p-1 bg-black rounded-sm mr-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4  text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                   </svg>
+                 </span>
+                  <span class="text-purple-700 text-opacity-60" style="color: rgb(46, 45, 45);">Goverment</span>
+               </div>
+
+               <div class="flex pt-3">
+                  <span class="p-1 bg-black rounded-sm mr-5">
+                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4  text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                   <span class="text-purple-700 text-opacity-60" style="color: rgb(46, 45, 45);">Foundation/Non Profit Organization</span>
+               </div>
+               <div class="flex pt-3">
+                  <span class="p-1 bg-black rounded-sm mr-5">
+                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4  text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                   <span class="text-purple-700 text-opacity-60" style="color: rgb(46, 45, 45);">Bankcuptcy</span>
+               </div>
+               <div class="flex pt-3">
+                  <span class="p-1 bg-black rounded-sm mr-5">
+                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4  text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                   <span class="text-purple-700 text-opacity-60" style="color: rgb(46, 45, 45);">Criminal</span>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+      <!--  ====================== scor Section =============================  -->
+
+      <div id="scorsection">
+         <div class="flex flex-wrap">
+            <div class="md:w-full">
+               <img src="img/3-1.jpg" class="w-full" style="height: 450px;" alt="##">
+            </div>
+         </div>
+      </div>
+
+
+      
+      <!--  ====================== Team Section =============================  -->
+      <section class="my-24">
+         <div class="container mx-auto">
+               <div class="text-center" >
+                  <h1 class="text-3xl text-black text-center pb-3" style="border-bottom: 2px solid#000;"> <b>Our Lawyer Team</b> </h1>
+               </div>
+            <div class="flex flex-wrap gap-23 pl-8">
+              <div class="md:w-4/12 pt-5 md:pt-5 text-center">
+                 <img src="img/1.jpg" class="w-96 mb-5 rounded transform hover:scale-90 motion-reduce:transform-none transition ease-out duration-700" alt="###">
+                 <span class="font-serif text-2xl">Fynley Wilkinson</span><br>
+                 <span class="font-serif">Managing Partner </span>
+              </div>
+              <div class="md:w-4/12 pt-5 md:pt-5 text-center">
+               <img src="img/5.jpg" class="w-96 mb-5 rounded transform hover:scale-90 motion-reduce:transform-none transition ease-out duration-700" alt="###">
+               <span class="font-serif text-2xl">Fynley Wilkinson</span><br>
+                 <span class="font-serif">Managing Partner </span>
+              </div>  
+              <div class="md:w-4/12 pt-5 md:pt-5 text-center">
+               <img src="img/4.jpg" class="w-96 mb-5 rounded transform hover:scale-90 motion-reduce:transform-none transition ease-out duration-700" alt="###">
+               <span class="font-serif text-2xl">Fynley Wilkinson</span><br>
+                 <span class="font-serif">Managing Partner </span>
+              </div>                   
+            </div>
+         </div>
+     </section>
+
+
+      <!--  ====================== Card Section =============================  -->
+      <section class="my-24">
+         <div class="container mx-auto">
+               <div class="text-center">
+                  <h1 class="text-3xl text-black text-center pb-3" style="border-bottom: 2px solid#000;"> <b>Testimonials</b> </h1>
+               </div>
+            <div class="flex flex-wrap gap-23">
+              <div class="md:w-4/12 pt-5 md:pt-5 md:my-0 px-4">
+                 <div class="p-10 rounded-sm hover:bg-gray-400 bg-gray-300 transition ease-in duration-1000">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                     <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z" />
+                     <path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z" />
+                   <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z" />
+                   </svg>
+                   <h1 href="#" class="text-black py-3"><b>Our Attorneys</b></h1>
+                   <span class="text-purple-700 text-opacity-60" style="color: rgb(27, 26, 26); line-height: 0.8cm;">Consequat occaecat ullamco am.upidatat in veniam ad. Eiusmod consequat eu adipisicing minim anim aliquip cupidatat culpa excepteur quis. Occaecat sit eu exercitation irure Lorem incididunt nostrud. </span>
+                   <h6 class="font-serif text-yellow-600 pt-3">John, Pixar Studio</h6>
+                  </div>
+              </div>
+              <div class="md:w-4/12 pt-5 md:pt-5 md:my-0 px-4">
+               <div class="p-10 rounded-sm hover:bg-gray-400 bg-gray-300 transition ease-in duration-1000">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                   <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z" />
+                   <path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z" />
+                 <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z" />
+                 </svg>
+                 <h1 href="#" class="text-black py-3"><b>Our Attorneys</b></h1>
+                 <span class="text-purple-700 text-opacity-60" style="color: rgb(27, 26, 26); line-height: 0.8cm;">Consequat occaecat ullamco am.upidatat in veniam ad. Eiusmod consequat eu adipisicing minim anim aliquip cupidatat culpa excepteur quis. Occaecat sit eu exercitation irure Lorem incididunt nostrud. </span>
+                 <h6 class="font-serif text-yellow-600 pt-3">John, Pixar Studio</h6>
+                </div>
+            </div>
+            <div class="md:w-4/12 pt-5 md:pt-5 md:my-0 px-4">
+               <div class="p-10 rounded-sm hover:bg-gray-400 bg-gray-300 transition ease-in duration-1000">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                   <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z" />
+                   <path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z" />
+                 <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z" />
+                 </svg>
+                 <h1 href="#" class="text-black py-3"><b>Our Attorneys</b></h1>
+                 <span class="text-purple-700 text-opacity-60" style="color: rgb(27, 26, 26); line-height: 0.8cm;">Consequat occaecat ullamco am.upidatat in veniam ad. Eiusmod consequat eu adipisicing minim anim aliquip cupidatat culpa excepteur quis. Occaecat sit eu exercitation irure Lorem incididunt nostrud. </span>
+                 <h6 class="font-serif text-yellow-600 pt-3">John, Pixar Studio</h6>
+                </div>
+            </div>
+            </div>
+         </div>
+     </section>
+
+
+       <!--  ====================== News Section =============================  -->
+       <section class="my-24">
+         <div class="container mx-auto">
+               <div class="text-center" >
+                  <h1 class="text-3xl text-black text-center pb-3"> <b>Latest News</b> </h1>
+               </div>
+            <div class="flex flex-wrap gap-23 pl-8">
+              <div class="md:w-4/12 pt-5 md:my-0 px-4">
+                 <div class="bg-gray-100 rounded">
+                     <img src="img/6.jpg" class="w-auto mb-5 rounded-t" alt="###">
+                     <div class="px-9 pb-9">
+                        <h6 class="font-serif text-xs text-yellow-600 py-3">Law Firm</h6>
+                        <h1 href="#" class="text-black py-3"><b>The Lawyer European <br>Awards shortlist</b></h1>
+                        <span class="text-purple-700 text-opacity-60" style="color: rgb(27, 26, 26); line-height: 0.8cm;">Eiusmod consequat eu adipisicing minim anim aliquip cupidatat culpa excepteur quis. Occaecat sit eu exercitation irure Lorem incididunt nostrud. </span>
+                        <h6 class="font-serif text-xs pt-4">Fynley Wilkinson</h6>
+                     </div>
+                 </div>
+              </div>
+              <div class="md:w-4/12 pt-5 md:my-0 px-4">
+               <div class="bg-gray-100 rounded">
+                   <img src="img/8.jpg" class="w-auto mb-5 rounded-t" alt="###">
+                   <div class="px-9 pb-9">
+                      <h6 class="font-serif text-xs text-yellow-600 py-3">Law Firm</h6>
+                      <h1 href="#" class="text-black py-3"><b>The Lawyer European <br>Awards shortlist</b></h1>
+                      <span class="text-purple-700 text-opacity-60" style="color: rgb(27, 26, 26); line-height: 0.8cm;">Eiusmod consequat eu adipisicing minim anim aliquip cupidatat culpa excepteur quis. Occaecat sit eu exercitation irure Lorem incididunt nostrud. </span>
+                      <h6 class="font-serif text-xs pt-4">Fynley Wilkinson</h6>
+                   </div>
+               </div>
+            </div>
+            <div class="md:w-4/12 pt-5 md:my-0 px-4">
+               <div class="bg-gray-100 rounded">
+                   <img src="img/7.jpg" class="w-auto mb-5 rounded-t" alt="###">
+                   <div class="px-9 pb-9">
+                      <h6 class="font-serif text-xs text-yellow-600 py-3">Law Firm</h6>
+                      <h1 href="#" class="text-black py-3"><b>The Lawyer European <br>Awards shortlist</b></h1>
+                      <span class="text-purple-700 text-opacity-60" style="color: rgb(27, 26, 26); line-height: 0.8cm;">Eiusmod consequat eu adipisicing minim anim aliquip cupidatat culpa excepteur quis. Occaecat sit eu exercitation irure Lorem incididunt nostrud. </span>
+                      <h6 class="font-serif text-xs pt-4">Fynley Wilkinson</h6>
+                   </div>
+               </div>
+            </div>
+            </div>
+         </div>
+     </section>
+
+
+          <!--  ====================== Foter Section =============================  -->
+       <section class="mt-24 bg-black" style="border-bottom: 1px solid rgb(202, 202, 202);">
+         <div class="container mx-auto py-14">
+            <div class="flex flex-wrap gap-23 pl-8">
+              <div class="md:w-4/12 pt-5 md:my-0 px-4">
+                 <img src="img/logo-light.png" alt="##">
+                 <div class="flex pt-12">
+                     <span class="p-1 bg-black rounded-sm mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                         </svg>
+                     </span>
+                     <span class="text-sm text-opacity-60" style="color: #fff;">08 W 36th St, New York, NY 10001</span>
+                  </div>
+                  <div class="flex pt-3">
+                     <span class="p-1 bg-black rounded-sm mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                         </svg>
+                     </span>
+                     <span class="text-sm text-opacity-60" style="color: #fff;">+1 333 9296</span>
+                  </div>
+                  <div class="flex pt-3">
+                     <span class="p-1 bg-black rounded-sm mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clip-rule="evenodd" />
+                         </svg>
+                     </span>
+                     <span class="text-sm text-opacity-60" style="color: #fff;"><a href="#!">contact@example.com</a></span>
+                  </div>
+                  <div class="flex pt-3">
+                     <span class="p-1 bg-black rounded-sm mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                     </span>
+                     <span class="text-sm text-opacity-60" style="color: #fff;"><a href="#!">Download Brochure</a></span>
+                  </div>
+              </div>
+
+              <div class="md:w-4/12 pt-5 md:my-0 px-4">
+               <h1 class="text-yellow-600"><b>Practice Areas</b></h1>
+               <div class="flex pt-7">
+                  <span class="bg-black rounded-sm mr-4">
+                     <b><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                     </b>
+                  </span>
+                  <span class="text-sm text-opacity-60" style="color: #fff;">Corporate and M&A</span>
+               </div>
+               <div class="flex pt-4">
+                  <span class="bg-black rounded-sm mr-4">
+                     <b><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                     </b>
+                  </span>
+                  <span class="text-sm text-opacity-60" style="color: #fff;">Construction and Real Estate</span>
+               </div>
+               <div class="flex pt-4">
+                  <span class="bg-black rounded-sm mr-4">
+                     <b><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                     </b>
+                  </span>
+                  <span class="text-sm text-opacity-60" style="color: #fff;">Commercial Duspute Resolution</span>
+               </div>
+               <div class="flex pt-4">
+                  <span class="bg-black rounded-sm mr-4">
+                     <b><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                     </b>
+                  </span>
+                  <span class="text-sm text-opacity-60" style="color: #fff;">Employment</span>
+               </div>
+               <div class="flex pt-4">
+                  <span class="bg-black rounded-sm mr-4">
+                     <b><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                      </svg>
+                     </b>
+                  </span>
+                  <span class="text-sm text-opacity-60" style="color: #fff;">Banking and Finance</span>
+               </div>
+              </div>
+
+              <div class="md:w-4/12 pt-5 md:my-0 px-4">
+               <h1 class="text-yellow-600"><b>Newsletter</b></h1>
+               <div class="flex pt-7">
+                  <span class="text-sm text-opacity-60" style="color: #fff;line-height: 2;">Signup for our newsletter to get the latest news, updates and special offers in your inbox. Lorem ipsum dolor sit.</span>
+               </div>
+               <span class="flex py-5">
+                     <input class=" h-9 w-64 border border-transparent focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent" placeholder=" enter your email">
+                  <button class="w-16 bg-yellow-600 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-opacity-50">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                   </button>
+               </span>
+               <span class="text-xs text-opacity-100 text-white">Your email is safe with us. We don't spam.</span>
+            </div>
+         </div>
+     </section>
+
+     <div class="bg-black">
+         <div class="container mx-auto px-4">
+            <div class="flex justify-between gap-23 pl-8">
+               <div class="py-5 md:my-0">
+                  <span class="text-sm text-opacity-60" style="color: #fff;"> © Copyright 2021 - Design by Sajal Roy</span>
+               </div>
+               <div class="md:my-0 flex items-center ">
+                  <div class="flex gap-2 items-center float-right">
+                     <a href="#!" class="px-4 py-2 bg-yellow-700 rounded-sm hover:bg-white group transition ease-in-out duration-700"><i class="fa fa-facebook-f text-white group-hover:text-yellow-700" style="font-size: 19px;"></i></a>
+                     <a href="#!" class="px-3 py-2 bg-yellow-700 rounded-sm hover:bg-white group transition ease-in-out duration-700"><i class="fa fa-twitter text-white group-hover:text-yellow-700" style="font-size: 19px;"></i></a>
+                     <a href="#!" class="px-3 py-2 bg-yellow-700 rounded-sm hover:bg-white group transition ease-in-out duration-700"><i class="fa fa-linkedin text-white group-hover:text-yellow-700" style="font-size: 19px;"></i></a>
+                     <a href="#!" class="px-3 py-2 bg-yellow-700 rounded-sm hover:bg-white group transition ease-in-out duration-700"><i class="fa fa-pinterest text-white group-hover:text-yellow-700" style="font-size: 19px;"></i></a>
+                     <a href="#!" class="px-3 py-2 bg-yellow-700 rounded-sm hover:bg-white group transition ease-in-out duration-700"><i class="fa fa-rss text-white group-hover:text-yellow-700" style="font-size: 19px;"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+     </div>
+   
+
+
+      <!-- gulp:js -->
+      <script src='https://d33wubrfki0l68.cloudfront.net/js/e3aeb05a1e1f79dd89e3aac244cfb77b1d8bcff4/assets/js/build.min.js'></script>
+    
+    <script>
+      let mainMenu = document.getElementById('main-menu');
+      let mainBtn = document.getElementById('main-btn');
+
+      mainBtn.addEventListener('click', function() {
+         mainMenu.classList.toggle('hidden');
+      });
+      </script>
+
+   </body>
+</html>
+
+
+
